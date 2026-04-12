@@ -200,10 +200,6 @@
       font-weight: 600;
     }
 
-    input[type="range"] {
-      width: 100%;
-      accent-color: #97ff00;
-    }
 
     .progress-track {
       height: 10px;
@@ -268,7 +264,6 @@
           <span>Project completion</span>
           <span id="progressValue">10%</span>
         </div>
-        <input type="range" id="progressSlider" min="0" max="100" value="10" />
         <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
       </div>
 
@@ -276,19 +271,19 @@
         <h2>Developers</h2>
         <ul class="dev-list">
           <li>RATT1FY Core Team</li>
-          <li>RARS Integration Lead</li>
-          <li>Frontend Visual Designer</li>
-          <li>Audio & Experience Engineer</li>
+          <li>Rustygooners</li>
+          <li>cool OPSEC Hackers team</li>
+          <li>Nice guy</li>
         </ul>
       </div>
 
       <div class="card">
         <h2>Updates</h2>
         <ul class="updates">
-          <li>Neon lime visual identity is live.</li>
-          <li>Join/reload intro animation and glow effects are active.</li>
-          <li>Background `music.mp3` playback is wired with autoplay fallback.</li>
-          <li>Public information remains limited while core systems stay private.</li>
+          <li>📝Preset Exec.</li>
+          <li>🎩 Jew Hat Inside</li>
+          <li>🥶 Input</li>
+          <li>🐀 Logs</li>
         </ul>
       </div>
     </section>
@@ -311,18 +306,17 @@
     const infoDialog = document.getElementById('infoDialog');
     const closeDialogBtn = document.getElementById('closeDialogBtn');
     const bgMusic = document.getElementById('bgMusic');
-    const progressSlider = document.getElementById('progressSlider');
     const progressFill = document.getElementById('progressFill');
     const progressValue = document.getElementById('progressValue');
 
     moreInfoBtn.addEventListener('click', () => infoDialog.showModal());
     closeDialogBtn.addEventListener('click', () => infoDialog.close());
 
-    progressSlider.addEventListener('input', (event) => {
-      const value = event.target.value;
-      progressFill.style.width = `${value}%`;
-      progressValue.textContent = `${value}%`;
-    });
+    // Change this value directly in index.html when you want to publish a new progress number.
+    const fixedProgress = 30;
+    progressFill.style.width = `${fixedProgress}%`;
+    progressValue.textContent = `${fixedProgress}%`;
+
 
     const tryPlay = async () => {
       try {
